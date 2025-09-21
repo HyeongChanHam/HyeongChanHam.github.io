@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: MS student @ <a href='https://cis.kaist.ac.kr/'>CIS Lab</a>, Korea Advanced Institute of Science & Technology (KAIST)
 
 profile:
   align: right
