@@ -391,16 +391,20 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
+            },},{id: "news-starting-my-m-s-study-at-kaist-ee",
+          title: 'Starting my M.S. study at KAIST EE.',
           description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
+          section: "News",},{id: "news-one-preprint-on-arxiv-dro-edl-mpc-evidential-deep-learning-based-distributionally-robust-model-predictive-control-for-safe-autonomous-driving",
+          title: 'One preprint on arXiv: DRO-EDL-MPC: Evidential Deep Learning-Based Distributionally Robust Model Predictive Control...',
           description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
+          section: "News",},{id: "news-awarded-the-hyundai-motor-chung-mong-koo-scholarship",
+          title: 'Awarded the Hyundai Motor Chung Mong-Koo Scholarship.',
+          description: "",
+          section: "News",},{id: "news-awarded-the-research-subsidies-for-m-s-candidates",
+          title: 'Awarded the Research Subsidies for M.S. Candidates.',
+          description: "",
+          section: "News",},{id: "news-i-will-attend-corl-2025-at-seoul-korea-to-present-dro-edl-mpc-safe-rol-workshop",
+          title: 'I will attend CoRL 2025 at Seoul, Korea to present DRO-EDL-MPC @ SAFE-ROL...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
