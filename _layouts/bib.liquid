@@ -29,7 +29,9 @@
         <video
           class="preview z-depth-1 rounded w-100"
           src="{{ entry.preview_video | escape }}"
-          {% if entry.preview %}poster="{{ entry.preview | escape }}"{% endif %}
+          {% if entry.preview %}
+            poster="{{ entry.preview | escape }}"
+          {% endif %}
           autoplay
           loop
           muted
