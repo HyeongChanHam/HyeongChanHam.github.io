@@ -25,7 +25,20 @@
           <abbr class="badge rounded w-100">{{ entry.abbr }}</abbr>
         {% endif %}
       {% endif %}
-      {% if entry.preview %}
+      {% if entry.preview_video %}
+        <video
+          class="preview z-depth-1 rounded w-100"
+          src="{{ entry.preview_video | escape }}"
+          {% if entry.preview %}poster="{{ entry.preview | escape }}"{% endif %}
+          autoplay
+          loop
+          muted
+          playsinline
+          controls
+          preload="metadata"
+          aria-label="{{ entry.title | escape }} — planned routes"
+        ></video>
+      {% elsif entry.preview %}
         {% if entry.preview contains '://' %}
           <img class="preview z-depth-1 rounded" src="{{ entry.preview }}">
         {% else %}
