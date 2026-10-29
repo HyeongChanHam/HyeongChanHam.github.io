@@ -28,7 +28,7 @@ layout: default
           {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
       30vw, 95vw"{% endcapture %}
           {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
+            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=site.first_name
             cache_bust=true
           %}
         {% endif %}
@@ -40,28 +40,34 @@ layout: default
 
     <div class="clearfix">{{ content }}</div>
 
-    <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
-      <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
-      </h2>
-      {% include news.liquid limit=true %}
+      <section class="profile-section" aria-labelledby="recent-news-heading">
+        <div class="profile-section-heading">
+          <h2 id="recent-news-heading">Recent News</h2>
+          <a href="{{ '/news/' | relative_url }}">All news &rarr;</a>
+        </div>
+        {% include news.liquid limit=true %}
+      </section>
     {% endif %}
 
-    <!-- Latest posts -->
-    {% if page.latest_posts and page.latest_posts.enabled %}
-      <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
-      </h2>
-      {% include latest_posts.liquid %}
-    {% endif %}
-
-    <!-- Selected papers -->
+    <!-- Selected research -->
     {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
-      </h2>
-      {% include selected_papers.liquid %}
+      <section class="profile-section" aria-labelledby="selected-research-heading">
+        <div class="profile-section-heading">
+          <h2 id="selected-research-heading">Selected Research</h2>
+          <a href="{{ '/publications/' | relative_url }}">All publications &rarr;</a>
+        </div>
+        {% include selected_papers.liquid %}
+      </section>
+    {% endif %}
+
+    {% if page.research_profile %}
+      {% include research_profile.liquid %}
+    {% endif %}
+
+    {% if page.latest_posts and page.latest_posts.enabled %}
+      <h2><a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a></h2>
+      {% include latest_posts.liquid %}
     {% endif %}
 
     <!-- Social -->
